@@ -1,0 +1,24 @@
+﻿@using CheeseMVC.Models
+@model List<CheeseCategory>
+@* you could also skip the @using statement with @model List<CheeseMVC.Mdels.CheeseCategory> *@
+@* does the relationship between @using and @model make more sense knowing this? *@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cheese Categories</title>
+</head>
+<body>
+
+<script>
+    alert(@Model.Count)
+</script>
+<div>
+    <ul>
+        @foreach (var category in Model) {
+            <li>@category.Name</li>
+        }
+    </ul>
+</div>
+</body>
+</html>

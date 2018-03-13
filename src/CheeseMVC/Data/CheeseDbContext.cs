@@ -7,6 +7,8 @@ namespace CheeseMVC.Data
     {
         public DbSet<Cheese> Cheeses { get; set; }
         
+        public DbSet<CheeseCategory> Categories { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             // Specify the path of the database here
             optionsBuilder.UseSqlite("Data Source=./CheeseMVC.sqlite");
